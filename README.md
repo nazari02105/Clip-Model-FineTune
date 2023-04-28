@@ -17,3 +17,8 @@ Since the best accuracy in cases without augmentation was achieved when no freez
 # CRC Dataset
 ## Finetune With Augmentation
 In [this file](./CRCFineTune/NoAugmentationWithFineTune.ipynb), first of all, the main dataset was downloaded, and one of the most important steps was to find the ROI (region of interest). Because in each image, there is a lot of non-tissue area, and for this reason, it is better not to include them in the network learning process. For this purpose, I used the Otsu threshold and found the ROI by converting it to the HSV space. However, the result was not good, and many non-tissue areas were still considered as ROI. So I used morphological operations with different kernels and opening and closing operations to optimize this ROI. Therefore, the mask of each image is created, and patches are generated based on it. Since generating patches was very time-consuming, I limited the amount of the dataset and trained the model on a small part of it, but if you want, you can remove this limitation. Finally, as in the previous sections, I added the network and lr_schedule and weight decay, and achieved a very good accuracy.
+<p align="center">
+  <img src="https://i.ibb.co/QfR8kS4/2023-04-28-10h19-27.png"/>
+  <br/>
+  a) refers to the original image. b) is for using HSV channels and otsu threshold. c) is after applying morphology and different kernels.
+</p>
