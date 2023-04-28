@@ -10,3 +10,5 @@ In [this file](./Cifar10FineTune/2-NoFineTuneWIthAugmentation.ipynb), which is q
 In [this file](./Cifar10FineTune/3-NoAugmentationWithFineTune.ipynb), I removed the augmentation, scheduling, etc. and wanted to see how the accuracy would change only by fine-tuning. Moreover, we can fine-tune in several ways, and in [this file](./Cifar10FineTune/3-NoAugmentationWithFineTune.ipynb), I did it without freezing any layers, even the layers related to the Clip model were not frozen.
 ## No Augmentation With Finetune (With Freezing Clip Part Layers)
 In [this file](./Cifar10FineTune/4-NoAugmentationWithFineTune.ipynb), which is almost similar to the previous section, the only addition is that the layers of the Clip section of the model have been frozen and only the head of the model is updated.
+## No Augmentation With Finetune (With Freezing Clip Part Layers After 2 Epochs)
+In [this file](./Cifar10FineTune/5-NoAugmentationWithFineTune.ipynb), which is exactly like the previous two sections, I froze the Clip layers but not from the beginning, and I did this after two epochs.
