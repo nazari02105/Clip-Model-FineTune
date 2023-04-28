@@ -13,4 +13,4 @@ In [this file](./Cifar10FineTune/4-NoAugmentationWithFineTune.ipynb), which is a
 ## No Augmentation With Finetune (With Freezing Clip Part Layers After 2 Epochs)
 In [this file](./Cifar10FineTune/5-NoAugmentationWithFineTune.ipynb), which is exactly like the previous two sections, I froze the Clip layers but not from the beginning, and I did this after two epochs.
 ## Finetune With Augmentation (Without Freezing any Layers)
-Since the best accuracy in cases without augmentation was achieved when no freezing was done, I applied this case without freezing and also applied the same factors such as lr scheduling, weight decay, etc in [this file](./Cifar10FineTune/6-FineTuneWithAugmentation.ipynb).
+Since the best accuracy in cases without augmentation was achieved when no freezing was done, I applied this case without freezing and also applied the same factors such as lr scheduling, weight decay, etc in [this file](./Cifar10FineTune/6_FineTuneWithAugmentation.ipynb).
